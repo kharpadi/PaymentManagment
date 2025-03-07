@@ -26,8 +26,8 @@ namespace PaymentManagment
             PaymentFactory factory = new PaymentFactory();
             ipaymentService = factory.GetInstance(comboBox1.SelectedValue.ToString());
             paymentservice = new PaymentService(ipaymentService);
-            label3.Text = ipaymentService.Pay(textBox1.Text);
-            label3.Visible = true;
+            MessageBox.Show(ipaymentService.Pay(textBox1.Text));
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace PaymentManagment
         {
             var payments =await _paymentRepository.GetAllPaymentsAsync();
             comboBox1.DataSource = payments;
-            comboBox1.DisplayMember = "DisplayName";  // ComboBox’ta gösterilecek özellik
+            comboBox1.DisplayMember = "DisplayName";  // ComboBoxta gösterilecek özellik
             comboBox1.ValueMember = "DatabaseName";      // Seçildiðinde alýnacak deðer
         }
     }

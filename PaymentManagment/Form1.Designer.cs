@@ -33,7 +33,7 @@
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
             PaymentButton = new Button();
-            label3 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             SuspendLayout();
             // 
             // PaymentTypeLbl
@@ -80,22 +80,16 @@
             PaymentButton.UseVisualStyleBackColor = true;
             PaymentButton.Click += PaymentButton_Click;
             // 
-            // label3
+            // sqlCommand1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(393, 328);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 5;
-            label3.Text = "label3";
-            label3.Visible = false;
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label3);
             Controls.Add(PaymentButton);
             Controls.Add(textBox1);
             Controls.Add(comboBox1);
@@ -115,6 +109,6 @@
         private ComboBox comboBox1;
         private TextBox textBox1;
         private Button PaymentButton;
-        private Label label3;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
     }
 }

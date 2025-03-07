@@ -10,7 +10,7 @@ namespace PaymentManagment.Payments
     {
         public string Pay(string message)
         {
-            return message + " payment made with Bitcoin.";
+            return message + " payment made by Bitcoin.";
         }
     }
 }

@@ -10,7 +10,7 @@ namespace PaymentManagment.Payments
     {
         public string Pay(string message)
         {
-            return message + " payment made with Cash.";
+            return message + " payment made by Cash.";
         }
     }
 }

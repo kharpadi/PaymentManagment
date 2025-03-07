@@ -24,9 +24,9 @@ namespace PaymentManagment
 
         private static void ConfigureServices(ServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(); // EF Core DbContext ekleniyor
-            services.AddScoped<IPaymentRepository, PaymentRepository>(); // Generic Repository ekleniyor
-            services.AddScoped<Form1>(); // Form1 DI container'a ekleniyor
+            services.AddDbContext<AppDbContext>();
+            services.AddSingleton<IPaymentRepository, PaymentRepository>();
+            services.AddScoped<Form1>();
         }
     }
 }
